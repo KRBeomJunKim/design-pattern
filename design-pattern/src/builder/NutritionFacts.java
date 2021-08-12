@@ -1,7 +1,6 @@
 package builder;
 
 public class NutritionFacts {
-	
 	private final int servingSize;
 	private final int servings;
 	private final int calories;
@@ -37,7 +36,6 @@ public class NutritionFacts {
 			carbohydrate = val;
 			return this;
 		}
-		
 		public Builder sodium(int val) {
 			sodium = val;
 			return this;
@@ -49,21 +47,11 @@ public class NutritionFacts {
 	}
 	
 	private NutritionFacts(Builder builder) {
-		servingSize = builder.servingSize;
-		servings = builder.servings;
-		calories = builder.calories;
-		fat = builder.fat;
-		sodium = builder.sodium;
-		carbohydrate = builder.carbohydrate;
+		servingSize  = builder.servingSize;
+        servings     = builder.servings;
+        calories     = builder.calories;
+        fat          = builder.fat;
+        sodium       = builder.sodium;
+        carbohydrate = builder.carbohydrate;
 	}
-	
-	public static void main(String[] args) {
-		NutritionFacts cocaCola = new NutritionFacts
-				.Builder(240, 8)
-				.calories(100)
-				.sodium(35)
-				.carbohydrate(27)
-				.build();
-	}
-
 }
